@@ -34,6 +34,10 @@
   color: var(--hover-color);
 }
 
+.nav-link:focus {
+  color: var(--hover-color);
+}
+
 .navbar-social {
   display: flex;
   gap: 20px;
@@ -44,9 +48,7 @@
   transition: color 0.3s ease;
 }
 
-.social-icon:hover {
-  color: var(--hover-color);
-}
+.social-icon:hover {}
 
 .hamburger-menu {
   display: none;
