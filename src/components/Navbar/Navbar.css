@@ -1,0 +1,122 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 15px 50px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.navbar-logo img {
+  height: 50px;
+  width: auto;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+  font-size: var(--p-font-size);
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--hover-color);
+}
+
+.navbar-social {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icon {
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: var(--hover-color);
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+/* Responsive view */
+/* Responsive view */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+
+  .hamburger-menu {
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .navbar-links {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    background-color: #f8f9fa;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    padding: 0 15px;
+  }
+
+  .navbar-social {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    background-color: #f8f9fa;
+    position: absolute;
+    left: 0;
+    padding: 0 15px;
+  }
+
+  /* When menu is active */
+  .navbar-links.active {
+    max-height: 300px;
+    padding: 15px;
+  }
+
+  .navbar-social.active {
+    max-height: 300px;
+    padding: 15px;
+    position: relative;
+    /* Change position */
+    top: 0;
+    /* Align with links */
+  }
+
+  .navbar-links.active+.navbar-social {
+    max-height: 300px;
+    padding: 0 15px 15px;
+  }
+}
