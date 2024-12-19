@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f8f9fa;
+  background-color: var(--navbar-color);
   padding: 15px 50px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -24,7 +24,7 @@
   align-items: center;
   gap: 5px;
   text-decoration: none;
-  color: #333;
+  color: var(--third-font-color);
   font-weight: 700;
   font-size: var(--p-font-size);
   transition: color 0.3s ease;
@@ -44,7 +44,7 @@
 }
 
 .social-icon {
-  color: #333;
+  color: var(--third-font-color);
   transition: color 0.3s ease;
 }
 

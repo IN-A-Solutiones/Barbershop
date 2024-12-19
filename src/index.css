@@ -6,11 +6,15 @@
 }
 
 :root {
-  --primary-bg-color: rgb(0, 0, 0);
+  --primary-bg-color: #f4f7f6;
   --secondary-bg-color: white;
+
+  --navbar-color: #4a5568;
+
 
   --primary-font-color: #1a202c;
   --secondary-font-color: #4a5568;
+  --third-font-color: #f4f7f6;
 
   --hover-color: red;
 
