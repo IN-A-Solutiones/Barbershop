@@ -24,19 +24,16 @@ const Navbar = () => {
 
       {/* Navigation Links */}
       <div className={`navbar-links ${isMenuOpen ? "active" : ""}`}>
-        <a href="#" className="nav-link" onClick={toggleMenu}>
-          <span>Home</span>
-        </a>
-        <a href="#" className="nav-link" onClick={toggleMenu}>
+        <a href="#about" className="nav-link" onClick={toggleMenu}>
           <span>About</span>
         </a>
-        <a href="#" className="nav-link" onClick={toggleMenu}>
+        <a href="#services" className="nav-link" onClick={toggleMenu}>
           <span>Service</span>
         </a>
-        <a href="#" className="nav-link" onClick={toggleMenu}>
+        <a href="#gallery" className="nav-link" onClick={toggleMenu}>
           <span>Gallery</span>
         </a>
-        <a href="#" className="nav-link" onClick={toggleMenu}>
+        <a href="#contact" className="nav-link" onClick={toggleMenu}>
           <span>Contact</span>
         </a>
       </div>

@@ -26,7 +26,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="services">
+    <section className="services" id="services">
       <div className="services-container">
         <h2 className="services-title">Szolgáltatások</h2>
 

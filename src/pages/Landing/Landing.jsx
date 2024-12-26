@@ -7,6 +7,7 @@ import React from "react";
 import Services from "../../components/Services/Services";
 import Gallery from "../../components/Gallery/Gallery";
 import Contact from "../../components/Contact/Contact";
+import GoogleMap from "../../components/GoogleMap/GoogleMap";
 
 const Landing = () => {
   return (
@@ -46,6 +47,7 @@ const Landing = () => {
       <Services />
       <Gallery />
       <Contact />
+      <GoogleMap />
       <footer></footer>
     </main>
   );

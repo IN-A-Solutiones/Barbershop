@@ -34,7 +34,7 @@ const Gallery = () => {
   };
 
   return (
-    <section className="gallery-section">
+    <section className="gallery-section" id="gallery">
       <div className="gallery-container">
         <h2 className="gallery-title">Galéria</h2>
 
