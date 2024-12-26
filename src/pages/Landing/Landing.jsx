@@ -4,6 +4,8 @@ import { SlArrowDown } from "react-icons/sl";
 import AboutImage from "../../assets/Images/about.webp";
 
 import React from "react";
+import Services from "../../components/Services/Services";
+import Gallery from "../../components/Gallery/Gallery";
 
 const Landing = () => {
   return (
@@ -40,6 +42,8 @@ const Landing = () => {
         </div>
       </section>
 
+      <Services />
+      <Gallery />
       <footer></footer>
     </main>
   );
