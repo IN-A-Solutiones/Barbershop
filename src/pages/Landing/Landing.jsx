@@ -6,6 +6,7 @@ import AboutImage from "../../assets/Images/about.webp";
 import React from "react";
 import Services from "../../components/Services/Services";
 import Gallery from "../../components/Gallery/Gallery";
+import Contact from "../../components/Contact/Contact";
 
 const Landing = () => {
   return (
@@ -44,6 +45,7 @@ const Landing = () => {
 
       <Services />
       <Gallery />
+      <Contact />
       <footer></footer>
     </main>
   );
