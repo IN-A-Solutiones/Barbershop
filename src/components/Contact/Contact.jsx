@@ -42,6 +42,27 @@ const Contact = () => {
           </button>
         </form>
       </div>
+      <div className="open-hours">
+        <h3>Opening Hours</h3>
+        <p>
+          <span>Monday - Friday:</span> 9:00 AM - 5:00 PM
+        </p>
+        <p>
+          <span>Saturday:</span> 10:00 AM - 4:00 PM
+        </p>
+        <p>
+          <span>Sunday:</span> Closed
+        </p>
+      </div>
+      <div className="address">
+        <h3>Our Address</h3>
+        <p>123 Barber Street, Barbershop City, BS1234</p>
+      </div>
+      <div className="contact-info">
+        <h3>Contact Information</h3>
+        <p>Phone: (123) 456-7890</p>
+        <p>Email: info@barbershop.com</p>
+      </div>
     </section>
   );
 };
