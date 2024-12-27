@@ -13,7 +13,6 @@ main header {
   position: relative;
   text-align: center;
   padding: 0 1rem;
-  /* Ensure text doesn't overflow on smaller screens */
 }
 
 main header h1 {
@@ -127,6 +126,15 @@ main header p {
   padding: 2rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  opacity: 0;
+  /* Kezdetben nem látható */
+  transition: opacity 1.5s ease;
+  /* Animáció hozzáadása */
+}
+
+.about-container.loaded {
+  opacity: 1;
+  /* Az animációval láthatóvá válik */
 }
 
 .about-image img {
