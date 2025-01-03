@@ -9,6 +9,7 @@ import Services from "../../components/Services/Services";
 import Gallery from "../../components/Gallery/Gallery";
 import Contact from "../../components/Contact/Contact";
 import GoogleMap from "../../components/GoogleMap/GoogleMap";
+import { SiFacebook, SiTiktok, SiInstagram } from "react-icons/si";
 
 const Landing = () => {
   gsap.registerPlugin(ScrollTrigger); // Regisztráljuk a ScrollTrigger plugint
@@ -131,6 +132,17 @@ const Landing = () => {
       <Services />
       <Gallery />
       <Contact />
+      <section className="social-section">
+        <a href="#" className="social-section-icon">
+          <SiFacebook size={54} />
+        </a>
+        <a href="#" className="social-section-icon">
+          <SiInstagram size={54} />
+        </a>
+        <a href="#" className="social-section-icon">
+          <SiTiktok size={54} />
+        </a>
+      </section>
       <GoogleMap />
       <footer></footer>
     </main>

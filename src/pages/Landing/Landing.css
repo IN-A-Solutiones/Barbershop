@@ -224,3 +224,22 @@ main header p {
     font-size: 0.9rem;
   }
 }
+
+.social-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--third-font-color);
+}
+
+.social-section-icon {
+  color: #333;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-section-icon:hover {
+  transform: scale(1.1);
+  /* Corrected to use transform */
+}
