@@ -1,6 +1,6 @@
-import React from "react";
-import { GiScissors, GiRazor, GiBeard } from "react-icons/gi";
 import "./Services.css";
+import { GiRazor, GiBeard } from "react-icons/gi";
+import { BsScissors } from "react-icons/bs";
 
 const Services = () => {
   const services = [
@@ -8,7 +8,7 @@ const Services = () => {
       name: "Hajvágás",
       price: "HUF 3000",
       description: "Friss és modern hajvágások, személyre szabott stílusok.",
-      icon: GiScissors,
+      icon: BsScissors,
     },
     {
       name: "Borotválkozás",
@@ -18,7 +18,7 @@ const Services = () => {
       icon: GiRazor,
     },
     {
-      name: "Beard Trim",
+      name: "Szakáll Igazítás",
       price: "HUF 1500",
       description: "Formázás és ápolás a tökéletes szakállért.",
       icon: GiBeard,
@@ -28,29 +28,17 @@ const Services = () => {
   return (
     <section className="services" id="services">
       <div className="services-container">
-        <h2 className="services-title">Szolgáltatások</h2>
-
-        {/* Header */}
-        <div className="services-header">
-          <div className="header-icon"></div>
-          <div className="content-grid">
-            <div className="header-name">Szolgáltatás</div>
-            <div className="header-price">Ár</div>
-            <div className="header-description">Leírás</div>
-          </div>
-        </div>
-
-        {/* Service Items */}
+        <h2 className="section-title">Szolgáltatások</h2>
         <div className="services-list">
           {services.map((service, index) => (
             <div key={index} className="service-item">
               <div className="service-icon">
                 <service.icon className="icon" />
               </div>
-              <div className="content-grid">
+              <div className="service-content">
                 <h3 className="service-name">{service.name}</h3>
-                <span className="service-price">{service.price}</span>
                 <p className="service-description">{service.description}</p>
+                <span className="service-price">{service.price}</span>
               </div>
             </div>
           ))}
