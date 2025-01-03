@@ -1,48 +1,93 @@
 import "./Services.css";
 import { GiRazor, GiBeard } from "react-icons/gi";
 import { BsScissors } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 const Services = () => {
   const services = [
     {
-      name: "Hajvágás",
-      price: "HUF 3000",
-      description: "Friss és modern hajvágások, személyre szabott stílusok.",
+      name: "Haircut",
+      price: "$40",
+      description: "Fresh and modern haircuts with personalized styles.",
       icon: BsScissors,
     },
     {
-      name: "Borotválkozás",
-      price: "HUF 2000",
+      name: "Shaving",
+      price: "$40",
       description:
-        "Klasszikus borotválkozás sima bőrfelülettel, meleg törölközővel.",
+        "Classic shaving with a smooth finish, complemented by a warm towel.",
       icon: GiRazor,
     },
     {
-      name: "Szakáll Igazítás",
-      price: "HUF 1500",
-      description: "Formázás és ápolás a tökéletes szakállért.",
+      name: "Beard Trimming",
+      price: "$30",
+      description: "Styling and grooming for the perfect beard.",
       icon: GiBeard,
     },
   ];
 
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 15,
+        delay: 0.2,
+      },
+    },
+  };
+
+  const iconVariants = {
+    hidden: { scale: 0, rotate: -180 },
+    visible: {
+      scale: 1,
+      rotate: 0,
+      transition: { type: "spring", stiffness: 100, damping: 15 },
+    },
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.6,
+        staggerChildren: 0.4, // Delay between animation
+      },
+    },
+  };
+
   return (
     <section className="services" id="services">
       <div className="services-container">
-        <h2 className="section-title">Szolgáltatások</h2>
-        <div className="services-list">
+        <h2 className="section-title">Services</h2>
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView={"visible"}
+          viewport={{ amount: 0.8 }}
+          className="services-list"
+        >
           {services.map((service, index) => (
-            <div key={index} className="service-item">
-              <div className="service-icon">
+            <motion.div
+              variants={cardVariants}
+              key={index}
+              className="service-item"
+            >
+              <motion.div variants={iconVariants} className="service-icon">
                 <service.icon className="icon" />
-              </div>
+              </motion.div>
               <div className="service-content">
                 <h3 className="service-name">{service.name}</h3>
                 <p className="service-description">{service.description}</p>
                 <span className="service-price">{service.price}</span>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
