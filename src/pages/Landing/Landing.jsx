@@ -66,7 +66,6 @@ const Landing = () => {
           start: "top 60%", // Az animáció akkor indul, amikor a szekció teteje a viewport 60%-ában van
           end: "bottom 20%", // Az animáció vége, amikor a szekció alja a viewport 20%-ánál
           toggleActions: "restart none none none", // Az animáció indítása
-          markers: true,
         },
       }
     );
@@ -90,7 +89,6 @@ const Landing = () => {
           start: "top 80%", // Az animáció akkor indul, amikor a kép teteje a viewport 80%-ában van
           end: "bottom 20%", // Az animáció vége, amikor a kép alja a viewport 20%-ánál
           toggleActions: "restart none none none", // Az animáció újraindítása
-          markers: true,
         },
       }
     );

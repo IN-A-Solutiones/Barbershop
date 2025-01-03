@@ -31,11 +31,11 @@
 }
 
 .nav-link:hover {
-  color: var(--hover-color);
+  color: var(--btn-hover-color);
 }
 
 .nav-link:focus {
-  color: var(--hover-color);
+  color: var(--btn-hover-color);
 }
 
 .navbar-social {

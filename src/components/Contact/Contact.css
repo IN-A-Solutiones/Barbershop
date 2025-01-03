@@ -1,89 +1,98 @@
 .contact {
-  background-image: url("../../assets/Images/contact-bg.webp");
-  background-size: cover;
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(3 1fr);
-  grid-template-rows: 1fr 1/2fr;
+  background-image: url(../../assets/Images/contact-bg.webp);
 }
 
 .contact-container {
-  grid-column-start: span 3;
-  width: 100%;
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-.contact-container h2 {
+.section-title {
   text-align: center;
-  color: #333;
-  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: var(--third-font-color);
+  margin-bottom: 2rem;
 }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.contact-form,
+.contact-details {
+  background: var(--primary-bg-color);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
 }
 
-.form-group label {
+label {
   display: block;
   font-weight: bold;
-  color: #555;
-  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
 }
 
-.form-group input,
-.form-group textarea {
+input,
+textarea {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: #333;
-  box-shadow: 0 0 5px rgba(51, 51, 51, 0.2);
+textarea {
+  resize: none;
 }
 
 .submit-button {
-  padding: 10px 15px;
-  background-color: #333;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
+  background-color: var(--accent-color);
+  color: var(--white);
   border: none;
+  padding: 0.75rem 1.5rem;
   border-radius: 5px;
+  font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .submit-button:hover {
-  background-color: #555;
+  background-color: var(--btn-hover-color);
 }
 
-.open-hours,
-.address,
-.contact-info {
-  text-align: center;
-  background-color: white;
-  padding: 2rem;
+.contact-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-@media (max-width: 768px) {
-  .contact {
-    grid-template-columns: 1fr;
+.contact-details ul {
+  list-style: none;
+  padding: 0;
+}
 
+.contact-details ul li {
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .contact-content {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem;
   }
 
+  .submit-button {
+    width: 100%;
+  }
 }

@@ -16,7 +16,8 @@
   --secondary-font-color: #4a5568;
   --third-font-color: #f4f7f6;
 
-  --hover-color: red;
+  --accent-color: #f7b42c;
+  --btn-hover-color: darkorange;
 
   --p-font-size: 18px;
   --h2-font-size: 40px;
