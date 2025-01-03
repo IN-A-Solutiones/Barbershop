@@ -39,13 +39,7 @@ const Gallery = () => {
       <div className="gallery-container">
         <h2 className="gallery-title">Gallery</h2>
 
-        <motion.div
-          className="gallery-grid"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: false, amount: 0.5 }} // Animáció minden egyes belépésnél
-          transition={{ duration: 0.6 }}
-        >
+        <div className="gallery-grid">
           {images.map((image, index) => (
             <motion.div
               key={image.id}
@@ -63,7 +57,7 @@ const Gallery = () => {
               <div className="gallery-overlay" />
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
         {selectedImageIndex !== null && (
           <div className="modal" onClick={closeModal}>
