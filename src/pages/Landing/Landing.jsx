@@ -11,6 +11,7 @@ import Contact from "../../components/Contact/Contact";
 import GoogleMap from "../../components/GoogleMap/GoogleMap";
 import { SiFacebook, SiTiktok, SiInstagram } from "react-icons/si";
 import Logo from "../../assets/Images/logo.webp";
+import Footer from "../../components/Footer/Footer";
 
 const Landing = () => {
   gsap.registerPlugin(ScrollTrigger); // Regisztráljuk a ScrollTrigger plugint
@@ -147,7 +148,7 @@ const Landing = () => {
         </div>
       </section>
       <GoogleMap />
-      <footer></footer>
+      <Footer />
     </main>
   );
 };
