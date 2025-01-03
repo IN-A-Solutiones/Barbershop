@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import "./Gallery.css";
 import Image1 from "../../assets/Images/Gallery/image1.webp";
 import Image2 from "../../assets/Images/Gallery/image2.webp";
@@ -38,18 +39,31 @@ const Gallery = () => {
       <div className="gallery-container">
         <h2 className="gallery-title">Galéria</h2>
 
-        <div className="gallery-grid">
+        <motion.div
+          className="gallery-grid"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: false, amount: 0.5 }} // Animáció minden egyes belépésnél
+          transition={{ duration: 0.6 }}
+        >
           {images.map((image, index) => (
-            <div
+            <motion.div
               key={image.id}
               className="gallery-item"
               onClick={() => setSelectedImageIndex(index)}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: false, amount: 0.5 }} // Animáció minden egyes belépésnél
+              transition={{
+                duration: 0.6,
+                delay: index * 0.2, // Késleltetés a képek közötti animációhoz
+              }}
             >
               <img src={image.src} alt={image.alt} className="gallery-image" />
               <div className="gallery-overlay" />
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {selectedImageIndex !== null && (
           <div className="modal" onClick={closeModal}>
