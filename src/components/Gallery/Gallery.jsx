@@ -37,7 +37,7 @@ const Gallery = () => {
   return (
     <section className="gallery-section" id="gallery">
       <div className="gallery-container">
-        <h2 className="gallery-title">Galéria</h2>
+        <h2 className="gallery-title">Gallery</h2>
 
         <motion.div
           className="gallery-grid"

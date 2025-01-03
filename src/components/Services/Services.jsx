@@ -63,7 +63,7 @@ const Services = () => {
   return (
     <section className="services" id="services">
       <div className="services-container">
-        <h2 className="section-title">Services</h2>
+        <h2 className="service-title">Services</h2>
         <motion.div
           variants={containerVariants}
           initial="hidden"

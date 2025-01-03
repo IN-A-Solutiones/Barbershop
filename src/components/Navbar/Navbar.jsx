@@ -13,9 +13,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       {/* Logo */}
-      <div className="navbar-logo">
-        <img src="/api/placeholder/100/40" alt="Logo" />
-      </div>
+      <div className="navbar-logo"></div>
 
       {/* Hamburger Menu Button */}
       <div className="hamburger-menu" onClick={toggleMenu}>

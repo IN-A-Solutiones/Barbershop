@@ -10,6 +10,7 @@ import Gallery from "../../components/Gallery/Gallery";
 import Contact from "../../components/Contact/Contact";
 import GoogleMap from "../../components/GoogleMap/GoogleMap";
 import { SiFacebook, SiTiktok, SiInstagram } from "react-icons/si";
+import Logo from "../../assets/Images/logo.webp";
 
 const Landing = () => {
   gsap.registerPlugin(ScrollTrigger); // Regisztráljuk a ScrollTrigger plugint
@@ -111,19 +112,18 @@ const Landing = () => {
             <img src={AboutImage} alt="About us" />
           </div>
           <div className="about-content">
-            <h2>Történetünk</h2>
+            <h2>OUR STORY</h2>
             <p>
-              Szenvedélyünk a férfiak ápoltsága, és hiszünk abban, hogy egy jó
-              hajvágás vagy borotválkozás nem csupán rutin, hanem igazi rituálé.
-              Célunk, hogy minden vendégünk számára egyedi élményt nyújtsunk –
-              egy helyet, ahol kikapcsolódhatsz, feltöltődhetsz, és magabiztosan
-              távozhatsz.
+              We are passionate about men's grooming, and we believe that a good
+              haircut or shave is not just a routine, but a true ritual. Our
+              goal is to provide each of our guests with a unique experience – a
+              place where you can relax, recharge, and leave with confidence.
             </p>
             <p>
-              Történetünk a szakmánk iránti elkötelezettségről és a közösség
-              iránti tiszteletről szól. Minden ollóvágásban, minden sima
-              borotvahúzásban ott van a múlt mestereinek hagyatéka, amit a
-              modern férfi igényeivel ötvözünk.
+              Our story is about commitment to our craft and respect for our
+              community. In every scissor cut, every smooth shave, there is the
+              legacy of the masters of the past, combined with the needs of the
+              modern man.
             </p>
           </div>
         </div>
@@ -133,15 +133,18 @@ const Landing = () => {
       <Gallery />
       <Contact />
       <section className="social-section">
-        <a href="#" className="social-section-icon">
-          <SiFacebook size={54} />
-        </a>
-        <a href="#" className="social-section-icon">
-          <SiInstagram size={54} />
-        </a>
-        <a href="#" className="social-section-icon">
-          <SiTiktok size={54} />
-        </a>
+        <img src={Logo} alt="logo" />
+        <div>
+          <a href="#" className="social-section-icon">
+            <SiFacebook size={54} />
+          </a>
+          <a href="#" className="social-section-icon">
+            <SiInstagram size={54} />
+          </a>
+          <a href="#" className="social-section-icon">
+            <SiTiktok size={54} />
+          </a>
+        </div>
       </section>
       <GoogleMap />
       <footer></footer>

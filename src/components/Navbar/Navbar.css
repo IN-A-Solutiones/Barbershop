@@ -14,6 +14,7 @@
 }
 
 .navbar-links {
+  font-family: var(--secondary-font);
   display: flex;
   align-items: center;
   gap: 25px;
